@@ -1,0 +1,9 @@
+﻿.tablefont {
+font-size:2ems;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:hotpink;
+}
+
+.bold {
+    font-weight: bold;
+}

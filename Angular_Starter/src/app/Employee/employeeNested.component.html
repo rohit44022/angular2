@@ -1,0 +1,39 @@
+﻿<employeeCount *ngIf="employeess" [all]="getAllEmployee()"
+               [male]="getMaleEmployee()"
+               [female]="getFemaleCount()"
+               (radioButtonSelectionChange)= "onEmployeeRadioButtonChange($event)"></employeeCount>
+
+<table class="table table-bordered table-responsive table-hover" >
+    <thead >
+        <tr>
+            <th>employee Code</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>gender</th>
+            <th>age</th>
+            <th>company</th>
+            <th>salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employeess">
+            <tr *ngIf="selectedEmployeeCountProp=='all' || selectedEmployeeCountProp==employee.gender">
+                <td>
+                    <a [routerLink]="['/employee',employee.empcode]">
+                    {{employee.empcode}}
+                </a></td>
+                <td>{{employee.firstname }}</td>
+                <td>{{employee.lastname}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.age}}</td>
+                <td>{{employee.company}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+
+   
+
+</table>
+<!--<h1 class="text-danger text-center" *ngIf="employeess.length==0">No Record Found</h1>-->
+

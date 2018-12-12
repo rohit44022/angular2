@@ -1,0 +1,42 @@
+﻿<h3>Navigate three tab emloyee Details shown over here {{getEmployeeName()}}</h3>
+<table class="tablefont table table-bordered">
+    <thead>
+        <tr>
+            <th attr.colspan="{{colSpan}}">Detailsss</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>First Name</td>
+        <td>{{firstname}}</td>
+    </tr>
+    <tr>
+        <td>LastName</td>
+        <td>{{lastname}}</td>
+
+    </tr>
+
+    <tr *ngIf="ShowButon">
+        <td>Gender</td>
+        <td>{{gender}}</td>
+    </tr>
+    <tr *ngIf="ShowButon">
+        <td>age</td>
+        <td>{{age}}</td>
+    </tr>
+</table>
+<<!--button [disabled]="buttonClick">click me</button>
+
+<button [class]="classToApply">Click here</button>
+
+<p  [style.font-size]="isBold?'40px' : '2px'">loren ipsum lorem ipsum lirudlcdskkdsgkdsgjgd</p>-->
+
+<!--<button (click)="myClick()">Click me</button>-->
+
+<!--<button (click)="showDetail()" class="btn btn-primary">{{ShowButon?'Show Detail':'hide Detail'}}</button>-->
+
+<br />
+<br />
+
+<input  [value]="textboxname"  [(ngModel)]="textboxname"/>
+{{textboxname}}
+    

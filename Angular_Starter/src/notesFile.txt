@@ -1,0 +1,121 @@
+﻿NgStyle attribute is used to style multiple inline styles in Ang2
+
+Event Binding:
+-------------- Event binding flows data  in the opposite  direction from html  element to a component 
+               2.when we use event binding we have to use brackets like ()--> this means in ang2 that we want to bind an event
+
+
+Structual directive
+
+two way data binding: For two way data binding if we want to show or pass textbox data to paragraph we have to use property binding () and also (input) event
+binding along withn $event.target.value. There is another easy method to same kind of operation by using ngModel porperty provided by angular 2. for model binding we use banana in box like [(ngmodel)] annotation.
+
+When we are using [(ngModel)] initailly it gives us error if we do not setup our environment correctly.You can check error in console tab.
+Error state that ngModel is not import in our application for for fix please see below instruction.
+1.go to app.module.ts file and make entry of ngModel sameas  ngModule  and browserModule.
+2.ngmodule is in different module so you have to make entru in a way --> import{FormsModule} from ''@angular/forms';'
+3.ngModel comes from '@angular/forms'; module
+4 also make same module entry in @ngModule section same like --> imports: [BrowserModule, ngModule ], 
+
+Angular ngFor Directive:
+---------------------------
+*ngFor is structual directive 
+What is structual directive?
+Ans:.Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
+
+Angular trackby
+----------------
+
+
+
+Angular Pipe:
+------------
+angular custom pipe use to create a custom filter and for this create a new typescript file name as xxxxx.pipe.ts
+
+2. Angular pipe also uses interface which is PipeTransform.so wen we create a new pipe ts file always impliment interface 
+example export class custompipe impliemts PipeTransform
+
+3. Also import pipe as declaration
+example : import{pipe} from'@angular/core';
+
+4: PipeTransform interface is having one method which is called transform(value,arguments) 
+
+also import pipetransform interface along with pipe
+
+Angular Container and Nestd Componenet:
+--------------------------------------
+1.nested component is a component which is nest under its parent component.
+2.we can pass parent component data to its nested component for that we have to import input property and bind all properties with @input() directive
+
+Passing user action or event from child component to parent component
+                            or
+user entered value from child component to parent component
+------------------------------------------------------------------------ 
+1.to pass data from child compponent to parent componenet we have to create a custom event and use of output properties
+so for this import {output,EventEmitter} class to child componenet
+2: event Emmiter class is used to create a custom event
+3: if we want to crate a event we have to decorate that event with @Output() property
+
+CustomEvents:
+----------------
+custom events is to provide and share information between different components in your application without having to directly linking them
+ngModel is a directive that allows your input to participate in a form
+
+
+Angular Life Cycle Hooks
+*****************************
+create the component
+renders the componenet
+create and render  the componenet  children
+checks when  the component  data bound  properties  changes 
+destory the component before  removing it from from dom
+
+ngOnchange :  executes every time when value of input property changes
+
+mngOninit: execute after  the constructor  and after ngOnchange  hooks for the first time 
+
+ngOndistory : executes  just before  angular destory  the componenet  and generally  used for  performing cleanup
+
+
+
+
+
+
+
+
+
+
+
+
+************************************
+Important Notes:
+1- Component .ts class file name is same as what we define in module class where we export class to make entry in module class
+
+
+Services in Angular:
+*******************
+
+To use services in ang02 we need to export injectable package and after that making ts file as a service use @injectable
+
+Angular 2 and web api
+*********************
+1.With in  root module(app Module), import  the angular  HTTPmodule
+
+
+Angular 2 Error handling
+************************
+In error handling we have to use first catch oprator in our custom service.
+2.one catch is register in import statement then use .catch method , with inisde 
+3.then in component file where we want to show error we have to use , (error)=>{}
+
+
+Angular Routing
+***************
+1. select and set base href uel to  /src/ in index.html file
+2. import router module and define routes.
+/now we create a route for our application bu now we need to tell angular that use these route and for this we have to register entry in ngmodule, routermodule
+4.tie the routes in html application 
+5.RouterLinkActive is used to set menu item active on load after when we click on another tab it will showthat tab as active
+6.router-outlet directive is used to tell angular that when we click on link it will load or render that component html.
+
+To read the browser url we can use activatedRoute service

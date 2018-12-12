@@ -1,0 +1,31 @@
+﻿<div style="padding:5px;">
+    <ul class="nav nav-tabs">
+        <li>
+            <a routerLinkActive="active" routerLink="navigateOne">Navigate One</a>
+            <!--RouterLinkActive-->
+        </li>
+        <li>
+            <a routerLinkActive="active" routerLink="navigateTwo">Navigate two</a>
+        </li>
+        <li>
+            <a routerLinkActive="active" routerLink="EmployeeNested">Navigate three</a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>
+
+<h3>This is a section for Nested Component Tutorial</h3>
+<employeeNestedComponent></employeeNestedComponent>
+
+<my-employee></my-employee>
+
+<h1>This is *ngFor exampple</h1>
+<employeeList></employeeList>
+<br />
+<br />
+
+<br />
+<br/>
+Below table grap the data from web api 
+<employeeListDatabaseWebApi></employeeListDatabaseWebApi>
+
