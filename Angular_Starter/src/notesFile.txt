@@ -119,3 +119,11 @@ Angular Routing
 6.router-outlet directive is used to tell angular that when we click on link it will load or render that component html.
 
 To read the browser url we can use activatedRoute service
+
+To generate a new angular project use below code in cmd
+*******************************************************
+ng new yourProjectname --skip-tests true
+
+to install boostrap in our project use below command in cmd
+***********************************************************
+npm

@@ -18,7 +18,7 @@ import { pageNotFound } from './others/pageNotFound.component';
 
 const appRoutes: Routes = [
     { path: 'EmployeeNested', component: EmployeeNested },
-    { path: 'employee/:code', component: employeeComponent},
+    { path: 'employee/:empcode', component: employeeComponent},
     { path: 'navigateOne', component: navigateOne },
     { path: 'navigateTwo', component: navigatetwo },
     { path: '', redirectTo: '/navigateOne', pathMatch: 'full' },

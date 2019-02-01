@@ -23,7 +23,7 @@ var navigateTwo_component_1 = require("./navigateTwo/navigateTwo.component");
 var pageNotFound_component_1 = require("./others/pageNotFound.component");
 var appRoutes = [
     { path: 'EmployeeNested', component: EmployeeNested_component_1.EmployeeNested },
-    { path: 'employee/:code', component: employee_component_1.employeeComponent },
+    { path: 'employee/:empcode', component: employee_component_1.employeeComponent },
     { path: 'navigateOne', component: navigateOne_1.navigateOne },
     { path: 'navigateTwo', component: navigateTwo_component_1.navigatetwo },
     { path: '', redirectTo: '/navigateOne', pathMatch: 'full' },
